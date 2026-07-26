@@ -145,6 +145,11 @@ npm install
 npm run dev
 ```
 
+## Contract details
+ID: CALIYU53IAX44XDGQ3APUHWU4BSPZFDAPSYYXW5FJTO7R3PU66LT74DR
+<img width="1360" height="620" alt="image" src="https://github.com/user-attachments/assets/82d23283-c70d-49fd-b753-954eccfc38bf" />
+
+
 Visit http://localhost:3000
 
 ## 📝 Usage Guide
