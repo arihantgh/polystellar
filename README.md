@@ -2,6 +2,15 @@
 
 A decentralized prediction market built on the Stellar blockchain where users can trade tokenized event contracts on future real-world outcomes.
 
+<img width="1366" height="616" alt="image" src="https://github.com/user-attachments/assets/5d9ae007-0b78-4ca8-ad35-b8c972044cd5" />
+<img width="1350" height="613" alt="image" src="https://github.com/user-attachments/assets/5df92000-bda5-4fc7-8f38-4b525f289b49" />
+<img width="1352" height="609" alt="image" src="https://github.com/user-attachments/assets/9ee0d9da-4e77-4d2f-aec3-dd71b3bf97e5" />
+<img width="1355" height="613" alt="image" src="https://github.com/user-attachments/assets/ee95be1a-2b0d-40fc-a124-91914d6886a4" />
+
+
+
+
+
 ## 🌟 Features
 
 - **Create Markets**: Anyone can create prediction markets for future events
