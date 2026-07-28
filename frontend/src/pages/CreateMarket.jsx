@@ -115,7 +115,7 @@ export default function CreateMarket() {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-white mb-2">Create New Market</h1>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">Create New Market</h1>
         <p className="text-slate-400">
           Create a prediction market for any future event
         </p>
@@ -219,7 +219,7 @@ export default function CreateMarket() {
         </div>
 
         {/* Guide Section - Below Dates */}
-        <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-5">
+        <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 sm:p-5">
           <h3 className="text-base font-semibold text-blue-400 mb-3 flex items-center">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

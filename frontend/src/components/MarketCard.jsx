@@ -44,7 +44,7 @@ export default function MarketCard({ market, onSelect }) {
       onClick={() => onSelect(market.id)}
     >
       <div className="flex justify-between items-start gap-3 mb-4">
-        <h3 className="text-lg font-semibold text-white flex-1 break-words">{market.question}</h3>
+        <h3 className="text-base sm:text-lg font-semibold text-white flex-1 break-words">{market.question}</h3>
         <div className="flex-shrink-0">
           {getStatusBadge()}
         </div>
@@ -55,11 +55,11 @@ export default function MarketCard({ market, onSelect }) {
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div className="bg-slate-700/50 rounded-lg p-3">
           <div className="text-xs text-slate-400 mb-1">YES</div>
-          <div className="text-xl font-bold text-success break-words">{formatPercentage(yesPrice)}</div>
+          <div className="text-lg sm:text-xl font-bold text-success break-words">{formatPercentage(yesPrice)}</div>
         </div>
         <div className="bg-slate-700/50 rounded-lg p-3">
           <div className="text-xs text-slate-400 mb-1">NO</div>
-          <div className="text-xl font-bold text-error break-words">{formatPercentage(noPrice)}</div>
+          <div className="text-lg sm:text-xl font-bold text-error break-words">{formatPercentage(noPrice)}</div>
         </div>
       </div>
       

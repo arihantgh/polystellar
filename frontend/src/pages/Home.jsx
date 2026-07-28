@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-white mb-2">Prediction Markets</h1>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">Prediction Markets</h1>
         <p className="text-slate-400">
           Trade on the outcome of future events with tokenized contracts on Stellar
         </p>
@@ -78,7 +78,7 @@ export default function Home() {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {markets.map((market) => (
             <MarketCard
               key={market.id}

@@ -25,12 +25,12 @@ export default function Layout({ children }) {
       <nav className="bg-slate-800 border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center gap-4 sm:gap-8">
               <Link to="/" className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold text-xl">P</span>
                 </div>
-                <span className="text-white font-bold text-xl whitespace-nowrap">PolyStellar</span>
+                <span className="text-white font-bold text-lg sm:text-xl whitespace-nowrap">PolyStellar</span>
               </Link>
               
               <div className="hidden md:flex space-x-4">
@@ -100,7 +100,7 @@ export default function Layout({ children }) {
       </nav>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
         {children}
       </main>
     </div>

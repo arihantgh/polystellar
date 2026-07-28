@@ -107,7 +107,7 @@ export default function Portfolio() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-white mb-2">Your Portfolio</h1>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">Your Portfolio</h1>
         <p className="text-slate-400">
           View and manage your positions across all markets
         </p>
@@ -122,7 +122,7 @@ export default function Portfolio() {
           >
             <div className="flex justify-between items-start mb-4">
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white mb-2">
+                <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
                   {market.question}
                 </h3>
                 <p className="text-slate-400 text-sm">
@@ -131,24 +131,24 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
               <div className="bg-green-500/20 rounded-lg p-3">
                 <div className="text-xs text-slate-400 mb-1">YES Shares</div>
-                <div className="text-lg font-bold text-success truncate">
+                <div className="text-base sm:text-lg font-bold text-success truncate">
                   {formatAmount(safeNumber(position.yesShares))}
                 </div>
               </div>
               
               <div className="bg-red-500/20 rounded-lg p-3">
                 <div className="text-xs text-slate-400 mb-1">NO Shares</div>
-                <div className="text-lg font-bold text-error truncate">
+                <div className="text-base sm:text-lg font-bold text-error truncate">
                   {formatAmount(safeNumber(position.noShares))}
                 </div>
               </div>
               
               <div className="bg-slate-700/50 rounded-lg p-3">
                 <div className="text-xs text-slate-400 mb-1">Status</div>
-                <div className="text-lg font-bold text-white">
+                <div className="text-base sm:text-lg font-bold text-white">
                   {safeNumber(market.status) === 0 && 'Active'}
                   {safeNumber(market.status) === 1 && 'Closed'}
                   {safeNumber(market.status) === 2 && 'Resolved'}
@@ -157,7 +157,7 @@ export default function Portfolio() {
               
               <div className="bg-slate-700/50 rounded-lg p-3">
                 <div className="text-xs text-slate-400 mb-1">Total Liquidity</div>
-                <div className="text-lg font-bold text-white truncate">
+                <div className="text-base sm:text-lg font-bold text-white truncate">
                   {formatAmount(safeNumber(market.totalLiquidity))}
                 </div>
               </div>

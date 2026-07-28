@@ -155,10 +155,10 @@ export default function MarketDetail() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="card mb-6">
-        <h1 className="text-3xl font-bold text-white mb-4 break-words">{market.question}</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-4 break-words">{market.question}</h1>
         <p className="text-slate-300 mb-6 break-words">{market.description}</p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6">
           <div>
             <div className="text-sm text-slate-400 mb-1">Status</div>
             <div className="text-white font-semibold">
@@ -192,30 +192,30 @@ export default function MarketDetail() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="card">
-          <h2 className="text-xl font-bold text-white mb-4">Current Prices</h2>
+          <h2 className="text-lg sm:text-xl font-bold text-white mb-4">Current Prices</h2>
           <div className="space-y-4">
             <div className="bg-green-500/20 border border-green-500 rounded-lg p-4">
               <div className="text-sm text-slate-400 mb-1">YES</div>
-              <div className="text-3xl font-bold text-success">{formatPercentage(yesPrice)}</div>
+              <div className="text-2xl sm:text-3xl font-bold text-success">{formatPercentage(yesPrice)}</div>
             </div>
             <div className="bg-red-500/20 border border-red-500 rounded-lg p-4">
               <div className="text-sm text-slate-400 mb-1">NO</div>
-              <div className="text-3xl font-bold text-error">{formatPercentage(noPrice)}</div>
+              <div className="text-2xl sm:text-3xl font-bold text-error">{formatPercentage(noPrice)}</div>
             </div>
           </div>
         </div>
 
         {position && (
           <div className="card">
-            <h2 className="text-xl font-bold text-white mb-4">Your Position</h2>
+            <h2 className="text-lg sm:text-xl font-bold text-white mb-4">Your Position</h2>
             <div className="space-y-4">
               <div>
                 <div className="text-sm text-slate-400 mb-1">YES Shares</div>
-                <div className="text-xl font-bold text-white">{formatAmount(safeNumber(position.yesShares))}</div>
+                <div className="text-lg sm:text-xl font-bold text-white">{formatAmount(safeNumber(position.yesShares))}</div>
               </div>
               <div>
                 <div className="text-sm text-slate-400 mb-1">NO Shares</div>
-                <div className="text-xl font-bold text-white">{formatAmount(safeNumber(position.noShares))}</div>
+                <div className="text-lg sm:text-xl font-bold text-white">{formatAmount(safeNumber(position.noShares))}</div>
               </div>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function MarketDetail() {
       </div>
 
       <div className="card">
-        <h2 className="text-xl font-bold text-white mb-4">Trade</h2>
+        <h2 className="text-lg sm:text-xl font-bold text-white mb-4">Trade</h2>
 
         {canClaim ? (
           <button
