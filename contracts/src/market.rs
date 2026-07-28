@@ -590,7 +590,6 @@ mod test {
         let (client, _admin, creator, trader, _token_id) = setup_test(&env);
 
         let market_id = create_default_market(&env, &client, &creator, 1000_0000000);
-
         let yes_price = client.get_price(&market_id, &Outcome::Yes);
         assert_eq!(yes_price, 5000);
 
@@ -598,7 +597,7 @@ mod test {
         assert!(shares_bought > 0);
 
         let yes_price_after = client.get_price(&market_id, &Outcome::Yes);
-        assert!(yes_price_after > 5000, "YES price should rise after buying YES");
+        assert!(yes_price_after > 5000);
 
         let tokens_returned = client.sell_shares(&trader, &market_id, &Outcome::Yes, &shares_bought);
         assert!(tokens_returned > 0);

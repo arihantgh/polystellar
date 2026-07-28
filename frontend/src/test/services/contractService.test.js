@@ -41,7 +41,7 @@ describe('contractService', () => {
   describe('createMarket', () => {
     it('calls invokeContract with CREATE_MARKET', async () => {
       invokeContract.mockResolvedValueOnce({ status: 'SUCCESS' })
-      const result = await createMarket(mockPublicKey, {
+      await createMarket(mockPublicKey, {
         question: 'Test?',
         description: 'Test market',
         endTime: 2000000000,
@@ -117,7 +117,7 @@ describe('contractService', () => {
 
     it('getPrice calls simulateContract for NO', async () => {
       simulateContract.mockResolvedValueOnce({ type: 'i128', value: 5000 })
-      const result = await getPrice(1, 'NO')
+      await getPrice(1, 'NO')
       expect(simulateContract).toHaveBeenCalledOnce()
     })
   })
