@@ -203,6 +203,21 @@ cd contracts
 cargo test
 ```
 
+Runs 11 tests covering market creation, buy/sell cycles, price impact,
+resolve + claim winnings, pagination, and edge cases.
+
+### Test Frontend
+
+```bash
+cd frontend
+npm test           # Run all tests
+npm run test:watch # Watch mode for development
+```
+
+Runs 56 tests across 5 suites covering utility functions, contract
+constants, MarketCard component rendering, contract service methods
+(with mocked blockchain), and wallet connection flow.
+
 ### Manual Testing
 
 Use the Stellar CLI to interact with contracts:
