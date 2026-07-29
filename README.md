@@ -255,6 +255,47 @@ soroban contract invoke \
   --market-id 1
 ```
 
+## 🔄 CI/CD Pipeline
+
+The project uses **GitHub Actions** for continuous integration and deployment. On every push/PR to `main`, the pipeline runs three jobs in parallel:
+
+| Job | What it does | Verifies |
+|-----|-------------|----------|
+| **Contracts** | `cargo test` + `cargo build --target wasm32-unknown-unknown --release` | Unit tests pass and WASM compiles |
+| **Frontend** | `npm ci` + `npm run build` | Dependencies install and production build succeeds |
+
+After both pass, a **deploy** job runs (only on `main`) that publishes the frontend to Cloudflare Pages.
+
+### Required Secrets
+
+Add these in your GitHub repo under **Settings → Secrets and variables → Actions**:
+
+| Secret | Purpose |
+|--------|---------|
+| `CLOUDFLARE_API_TOKEN` | Cloudflare API token with Pages permissions |
+| `CLOUDFLARE_ACCOUNT_ID` | Your Cloudflare account ID (find in Cloudflare dashboard) |
+
+The deploy job uses `GITHUB_TOKEN` automatically (no setup needed) to create visible GitHub Deployments.
+
+### Manual Verification
+
+```bash
+# Run what CI checks locally:
+
+# 1. Contracts
+cd contracts
+cargo test                        # runs all unit tests
+cargo build --target wasm32-unknown-unknown --release  # verifies WASM build
+
+# 2. Frontend
+cd frontend
+npm ci                            # clean install from lockfile
+npm run build                     # production build
+
+# Push to GitHub — check Actions tab for pipeline run
+git push origin main
+```
+
 ## 🌐 Deploying to Cloudflare Pages
 
 ### Method 1: Using Wrangler CLI
