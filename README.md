@@ -203,8 +203,7 @@ cd contracts
 cargo test
 ```
 
-Runs 11 tests covering market creation, buy/sell cycles, price impact,
-resolve + claim winnings, pagination, and edge cases.
+Runs 11 tests
 
 ### Test Frontend
 
@@ -214,9 +213,11 @@ npm test           # Run all tests
 npm run test:watch # Watch mode for development
 ```
 
-Runs 56 tests across 5 suites covering utility functions, contract
-constants, MarketCard component rendering, contract service methods
-(with mocked blockchain), and wallet connection flow.
+Runs 56 tests
+
+<img width="686" height="280" alt="image" src="https://github.com/user-attachments/assets/c339af3c-ccdd-4ef9-a6e0-06828baef2d1" />
+<img width="1304" height="793" alt="image" src="https://github.com/user-attachments/assets/b9fd1116-af59-407e-a57f-59984a25fa2f" />
+
 
 ### Manual Testing
 
