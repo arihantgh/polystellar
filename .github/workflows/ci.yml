@@ -34,10 +34,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-
-      - name: Check lockfile
-        run: node -e "const l=require('./package-lock.json'); console.log('lockfileVersion:', l.lockfileVersion, '| packages:', Object.keys(l.packages).length)" && npm --version
-        working-directory: frontend
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install dependencies
         run: npm install
@@ -49,9 +47,12 @@ jobs:
 
   deploy:
     name: Deploy to Cloudflare Pages
-    if: github.ref == 'refs/heads/main' && success()
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: [contracts, frontend]
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://polystellar.pages.dev
     permissions:
       contents: read
       deployments: write
@@ -75,6 +76,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy --project-name=polystellar
+          command: pages deploy dist --project-name=polystellar
           workingDirectory: frontend
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
