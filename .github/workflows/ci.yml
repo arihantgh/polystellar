@@ -35,8 +35,12 @@ jobs:
         with:
           node-version: 22
 
+      - name: Check lockfile
+        run: node -e "const l=require('./package-lock.json'); console.log('lockfileVersion:', l.lockfileVersion, '| packages:', Object.keys(l.packages).length)" && npm --version
+        working-directory: frontend
+
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         working-directory: frontend
 
       - name: Build
@@ -59,7 +63,7 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         working-directory: frontend
 
       - name: Build
