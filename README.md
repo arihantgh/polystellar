@@ -279,6 +279,7 @@ Add these in your GitHub repo under **Settings → Secrets and variables → Act
 The deploy job uses `GITHUB_TOKEN` automatically (no setup needed) to create visible GitHub Deployments.
 
 <img width="1463" height="858" alt="image" src="https://github.com/user-attachments/assets/95457f5e-bd21-495d-bc51-53866f5d9a81" />
+<img width="1461" height="885" alt="image" src="https://github.com/user-attachments/assets/acc776eb-513a-4fcb-92ff-c55fe44fe9a1" />
 
 
 ### Manual Verification
