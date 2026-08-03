@@ -24,18 +24,18 @@ echo "Network: $NETWORK"
 echo "Identity: $IDENTITY"
 echo ""
 
-# Check if soroban CLI is installed
-if ! command -v soroban &> /dev/null; then
-    echo -e "${RED}Error: soroban CLI not found${NC}"
+# Check if stellar CLI is installed
+if ! command -v stellar &> /dev/null; then
+    echo -e "${RED}Error: stellar CLI not found${NC}"
     echo "Install with: cargo install --locked soroban-cli"
     exit 1
 fi
 
 # Check if network is configured
-if ! soroban network ls | grep -q "$NETWORK"; then
+if ! stellar network ls | grep -q "$NETWORK"; then
     echo -e "${YELLOW}Network $NETWORK not found. Adding...${NC}"
     if [ "$NETWORK" == "testnet" ]; then
-        soroban network add --global testnet \
+        stellar network add --global testnet \
             --rpc-url https://soroban-testnet.stellar.org:443 \
             --network-passphrase "Test SDF Network ; September 2015"
     else
@@ -45,12 +45,12 @@ if ! soroban network ls | grep -q "$NETWORK"; then
 fi
 
 # Check if identity exists
-if ! soroban keys address "$IDENTITY" &> /dev/null; then
+if ! stellar keys address "$IDENTITY" &> /dev/null; then
     echo -e "${YELLOW}Identity $IDENTITY not found. Creating...${NC}"
-    soroban keys generate --global "$IDENTITY" --network "$NETWORK"
+    stellar keys generate --global "$IDENTITY" --network "$NETWORK"
 fi
 
-ADMIN_ADDRESS=$(soroban keys address "$IDENTITY")
+ADMIN_ADDRESS=$(stellar keys address "$IDENTITY")
 echo -e "Admin address: ${GREEN}$ADMIN_ADDRESS${NC}"
 echo ""
 
@@ -68,9 +68,9 @@ cd "$(dirname "$0")/../contracts" || exit
 # Build contract
 echo ""
 echo -e "${YELLOW}Building contract...${NC}"
-soroban contract build
+stellar contract build
 
-if [ ! -f "target/wasm32-unknown-unknown/release/polystellar_contracts.wasm" ]; then
+if [ ! -f "target/wasm32v1-none/release/polystellar_contracts.wasm" ]; then
     echo -e "${RED}Error: Build failed${NC}"
     exit 1
 fi
@@ -80,16 +80,16 @@ echo -e "${GREEN}Build successful!${NC}"
 # Optimize contract
 echo ""
 echo -e "${YELLOW}Optimizing contract...${NC}"
-soroban contract optimize \
-    --wasm target/wasm32-unknown-unknown/release/polystellar_contracts.wasm
+stellar contract optimize \
+    --wasm target/wasm32v1-none/release/polystellar_contracts.wasm
 
 echo -e "${GREEN}Optimization complete!${NC}"
 
 # Deploy contract
 echo ""
 echo -e "${YELLOW}Deploying prediction market contract...${NC}"
-CONTRACT_ID=$(soroban contract deploy \
-    --wasm target/wasm32-unknown-unknown/release/polystellar_contracts.wasm \
+CONTRACT_ID=$(stellar contract deploy \
+    --wasm target/wasm32v1-none/release/polystellar_contracts.wasm \
     --source "$IDENTITY" \
     --network "$NETWORK")
 
@@ -99,10 +99,9 @@ echo -e "Contract ID: ${GREEN}$CONTRACT_ID${NC}"
 # Deploy/wrap token
 echo ""
 echo -e "${YELLOW}Wrapping native token...${NC}"
-TOKEN_ID=$(soroban lab token wrap \
+TOKEN_ID=$(stellar contract id asset \
     --asset native \
-    --network "$NETWORK" \
-    --source "$IDENTITY")
+    --network "$NETWORK")
 
 echo -e "${GREEN}Token wrapped!${NC}"
 echo -e "Token ID: ${GREEN}$TOKEN_ID${NC}"
@@ -110,7 +109,7 @@ echo -e "Token ID: ${GREEN}$TOKEN_ID${NC}"
 # Initialize contract
 echo ""
 echo -e "${YELLOW}Initializing contract...${NC}"
-soroban contract invoke \
+stellar contract invoke \
     --id "$CONTRACT_ID" \
     --source "$IDENTITY" \
     --network "$NETWORK" \
@@ -123,9 +122,10 @@ echo -e "${GREEN}Contract initialized!${NC}"
 # Verify deployment
 echo ""
 echo -e "${YELLOW}Verifying deployment...${NC}"
-MARKET_COUNT=$(soroban contract invoke \
+MARKET_COUNT=$(stellar contract invoke \
     --id "$CONTRACT_ID" \
     --network "$NETWORK" \
+    --source-account "$IDENTITY" \
     -- get_market_count)
 
 echo -e "Market count: ${GREEN}$MARKET_COUNT${NC}"
