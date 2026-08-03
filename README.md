@@ -7,10 +7,6 @@ A decentralized prediction market built on the Stellar blockchain where users ca
 <img width="1352" height="609" alt="image" src="https://github.com/user-attachments/assets/9ee0d9da-4e77-4d2f-aec3-dd71b3bf97e5" />
 <img width="1355" height="613" alt="image" src="https://github.com/user-attachments/assets/ee95be1a-2b0d-40fc-a124-91914d6886a4" />
 
-
-
-
-
 ## 🌟 Features
 
 - **Create Markets**: Anyone can create prediction markets for future events
@@ -155,6 +151,9 @@ npm run dev
 ```
 
 ## Contract details
+ID: CBQB45AJAICDPNQ27ZF2RWNV45GYXK7LHTT473NWXN2NNRYVJXRAUQTC
+<img width="1457" height="890" alt="image" src="https://github.com/user-attachments/assets/86860d78-5faa-425d-b90f-a711b69d857e" />
+
 ID: CALIYU53IAX44XDGQ3APUHWU4BSPZFDAPSYYXW5FJTO7R3PU66LT74DR
 <img width="1360" height="620" alt="image" src="https://github.com/user-attachments/assets/82d23283-c70d-49fd-b753-954eccfc38bf" />
 
