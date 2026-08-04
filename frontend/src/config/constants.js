@@ -4,7 +4,7 @@ export const HORIZON_URL = 'https://horizon-testnet.stellar.org'
 export const SOROBAN_RPC_URL = 'https://soroban-testnet.stellar.org'
 
 // Contract addresses (update these after deploying your contracts)
-export const CONTRACT_ID = 'CALIYU53IAX44XDGQ3APUHWU4BSPZFDAPSYYXW5FJTO7R3PU66LT74DR'
+export const CONTRACT_ID = 'CBQB45AJAICDPNQ27ZF2RWNV45GYXK7LHTT473NWXN2NNRYVJXRAUQTC'
 export const TOKEN_ID = 'CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC'
 
 // Contract methods
