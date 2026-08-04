@@ -71,7 +71,7 @@ describe('UI config', () => {
     expect(MARKETS_PER_PAGE).toBe(10)
   })
 
-  it('blocks market ID 1', () => {
-    expect(BLOCKED_MARKET_IDS).toContain(1)
+  it('has no blocked markets', () => {
+    expect(BLOCKED_MARKET_IDS).toEqual([])
   })
 })

@@ -42,5 +42,5 @@ export const TOKEN_DECIMALS = 7
 export const MARKETS_PER_PAGE = 10
 export const MIN_LIQUIDITY = 100 * Math.pow(10, TOKEN_DECIMALS)
 
-// Blocked market IDs (markets to hide from UI)
-export const BLOCKED_MARKET_IDS = [1] // Add market IDs to hide here
+// Blocked market IDs (markets to hide from UI, e.g. test data)
+export const BLOCKED_MARKET_IDS = [] // Add market IDs to hide here
