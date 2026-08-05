@@ -10,6 +10,9 @@ A decentralized prediction market built on the Stellar blockchain where users ca
 ## Demo Video
 https://drive.google.com/file/d/1NloE2g9Yc8-2iM_ZiFwh-9J9Av9EOqvu/view?usp=sharing
 
+## Pitch Deck
+https://docs.google.com/presentation/d/1EzriGI0YAjfQURlr5AMlsNc_r22jr2Pm/edit?usp=sharing&ouid=104832495897645338011&rtpof=true&sd=true
+
 ## 🌟 Features
 
 - **Create Markets**: Anyone can create prediction markets for future events
