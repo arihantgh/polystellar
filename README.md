@@ -7,6 +7,9 @@ A decentralized prediction market built on the Stellar blockchain where users ca
 <img width="1352" height="609" alt="image" src="https://github.com/user-attachments/assets/9ee0d9da-4e77-4d2f-aec3-dd71b3bf97e5" />
 <img width="1355" height="613" alt="image" src="https://github.com/user-attachments/assets/ee95be1a-2b0d-40fc-a124-91914d6886a4" />
 
+## Demo Video
+https://drive.google.com/file/d/1NloE2g9Yc8-2iM_ZiFwh-9J9Av9EOqvu/view?usp=sharing
+
 ## 🌟 Features
 
 - **Create Markets**: Anyone can create prediction markets for future events
