@@ -43,6 +43,9 @@ export default function Layout({ children }) {
                 <Link to="/create" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap">
                   Create Market
                 </Link>
+                <Link to="/testnet-users" className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap">
+                  Testnet Users
+                </Link>
               </div>
             </div>
 
@@ -93,6 +96,13 @@ export default function Layout({ children }) {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Create Market
+              </Link>
+              <Link 
+                to="/testnet-users" 
+                className="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Testnet Users
               </Link>
             </div>
           )}
