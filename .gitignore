@@ -31,7 +31,6 @@ build/
 .DS_Store
 
 # Deployment
-deployment-info.txt
 wrangler.toml.bak
 
 # Logs
@@ -49,7 +48,6 @@ temp/
 *.tmp
 
 # Testnet user seeding (generated proof files contain secret keys)
-testnet-users-report.json
 scripts/seed-testnet-users.mjs
 scripts/seed-testnet-users.sh
 scripts/verify-testnet-users.sh
