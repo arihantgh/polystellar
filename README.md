@@ -13,6 +13,14 @@ https://drive.google.com/file/d/1NloE2g9Yc8-2iM_ZiFwh-9J9Av9EOqvu/view?usp=shari
 ## Pitch Deck
 https://docs.google.com/presentation/d/1EzriGI0YAjfQURlr5AMlsNc_r22jr2Pm/edit?usp=sharing&ouid=104832495897645338011&rtpof=true&sd=true
 
+## Proof of testnet users
+https://stellar.expert/explorer/testnet/contract/CBQB45AJAICDPNQ27ZF2RWNV45GYXK7LHTT473NWXN2NNRYVJXRAUQTC
+https://raw.githubusercontent.com/arihantgh/polystellar/refs/heads/main/testnet-users-report.json
+<img width="1435" height="880" alt="image" src="https://github.com/user-attachments/assets/a01f56df-37ca-4aa3-947d-100007182d86" />
+<img width="1365" height="889" alt="image" src="https://github.com/user-attachments/assets/3dcdacc6-0694-471f-a1dd-fbc0b56d1fce" />
+<img width="1452" height="883" alt="image" src="https://github.com/user-attachments/assets/8328faf6-e539-4e1c-b611-590620449570" />
+
+
 ## 🌟 Features
 
 - **Create Markets**: Anyone can create prediction markets for future events
