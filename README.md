@@ -8,12 +8,15 @@ A decentralized prediction market built on the Stellar blockchain where users ca
 <img width="1355" height="613" alt="image" src="https://github.com/user-attachments/assets/ee95be1a-2b0d-40fc-a124-91914d6886a4" />
 
 ## Demo Video
+
 https://drive.google.com/file/d/1NloE2g9Yc8-2iM_ZiFwh-9J9Av9EOqvu/view?usp=sharing
 
 ## Pitch Deck
+
 https://docs.google.com/presentation/d/1EzriGI0YAjfQURlr5AMlsNc_r22jr2Pm/edit?usp=sharing&ouid=104832495897645338011&rtpof=true&sd=true
 
-## Proof of testnet users
+## Proof of Testnet Users
+
 https://stellar.expert/explorer/testnet/contract/CBQB45AJAICDPNQ27ZF2RWNV45GYXK7LHTT473NWXN2NNRYVJXRAUQTC
 
 http://polystellar.pages.dev/testnet-users
@@ -24,6 +27,11 @@ https://raw.githubusercontent.com/arihantgh/polystellar/refs/heads/main/testnet-
 <img width="1365" height="889" alt="image" src="https://github.com/user-attachments/assets/3dcdacc6-0694-471f-a1dd-fbc0b56d1fce" />
 <img width="1452" height="883" alt="image" src="https://github.com/user-attachments/assets/8328faf6-e539-4e1c-b611-590620449570" />
 
+## Feedback CSV
+
+https://drive.google.com/file/d/1GeOfMldiNG8vDBs25XmR1Gqf3pgis3w5/view?usp=sharing
+
+https://github.com/arihantgh/polystellar/blob/main/feedback.csv
 
 ## 🌟 Features
 
