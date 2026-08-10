@@ -63,6 +63,21 @@ export async function claimWinnings(publicKey, marketId) {
 }
 
 /**
+ * Resolve a market (admin only — typically called via CLI, exposed here for completeness)
+ */
+export async function resolveMarket(publicKey, marketId, outcome) {
+  const outcomeValue = outcome === 'YES' ? OUTCOME.YES : OUTCOME.NO
+
+  const params = [
+    StellarSdk.Address.fromString(publicKey).toScVal(),
+    StellarSdk.nativeToScVal(marketId, { type: 'u64' }),
+    StellarSdk.nativeToScVal(outcomeValue, { type: 'u32' }),
+  ]
+
+  return await invokeContract(publicKey, CONTRACT_METHODS.RESOLVE_MARKET, params)
+}
+
+/**
  * Get market details
  */
 export async function getMarket(marketId) {

@@ -489,6 +489,28 @@ Get markets with pagination.
 #### `get_price(market_id: u64, outcome: Outcome) -> i128`
 Get current price for an outcome (in basis points).
 
+### Contract-Frontend API Mapping
+
+Every contract method has a corresponding frontend wrapper in `frontend/src/services/contractService.js`. The table below shows the complete mapping:
+
+| Contract Method | Frontend Function | Source File | Used By |
+|---|---|---|---|
+| `initialize` | — (CLI only, admin) | — | — |
+| `create_market` | `createMarket()` | `contractService.js:15` | `CreateMarket.jsx` |
+| `buy_shares` | `buyShares()` | `contractService.js:32` | `MarketDetail.jsx` |
+| `sell_shares` | `sellShares()` | `contractService.js:50` | `MarketDetail.jsx` |
+| `resolve_market` | `resolveMarket()` | `contractService.js:68` | CLI only (admin) |
+| `claim_winnings` | `claimWinnings()` | `contractService.js:79` | `MarketDetail.jsx` |
+| `get_market` | `getMarket()` | `contractService.js:91` | `MarketDetail.jsx`, `TestnetUsers.jsx` |
+| `get_position` | `getPosition()` | `contractService.js:103` | `MarketDetail.jsx`, `Portfolio.jsx`, `TestnetUsers.jsx` |
+| `get_market_count` | `getMarketCount()` | `contractService.js:118` | internal |
+| `get_all_markets` | `getAllMarkets()` | `contractService.js:127` | `Home.jsx`, `Portfolio.jsx` |
+| `get_price` | `getPrice()` | `contractService.js:170` | UI price display |
+
+**Write methods** (1st–6th) use `invokeContract()` to submit Soroban transactions. **Read methods** (7th–11th) use `simulateContract()` which performs a dry-run simulation — no transaction fee required.
+
+Method name constants are defined in `frontend/src/config/constants.js` (`CONTRACT_METHODS`), ensuring the frontend always calls the correct Soroban function names.
+
 ## 🐛 Troubleshooting
 
 ### Contract Build Errors
