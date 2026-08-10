@@ -7,6 +7,15 @@ A decentralized prediction market built on the Stellar blockchain where users ca
 <img width="1352" height="609" alt="image" src="https://github.com/user-attachments/assets/9ee0d9da-4e77-4d2f-aec3-dd71b3bf97e5" />
 <img width="1355" height="613" alt="image" src="https://github.com/user-attachments/assets/ee95be1a-2b0d-40fc-a124-91914d6886a4" />
 
+MOBILE RESPONSIVE
+
+<img width="320" height="694" alt="image" src="https://github.com/user-attachments/assets/664a022d-b277-406a-9739-d37f3b0fb33b" />
+<img width="321" height="684" alt="image" src="https://github.com/user-attachments/assets/30ae8636-1bd4-4549-9ed8-a0c1ae8d2557" />
+<img width="330" height="711" alt="image" src="https://github.com/user-attachments/assets/c1f8eb0a-40ed-49a6-a7a1-f8c487d591a7" />
+<img width="332" height="719" alt="image" src="https://github.com/user-attachments/assets/a5c251bf-710d-4aba-bb89-6db5d507a991" />
+<img width="332" height="722" alt="image" src="https://github.com/user-attachments/assets/dd0c64a5-3b55-4101-bfbc-69fe8ecbe042" />
+
+
 ## Demo Video
 
 https://drive.google.com/file/d/1NloE2g9Yc8-2iM_ZiFwh-9J9Av9EOqvu/view?usp=sharing
