@@ -36,11 +36,11 @@ https://raw.githubusercontent.com/arihantgh/polystellar/refs/heads/main/testnet-
 <img width="1365" height="889" alt="image" src="https://github.com/user-attachments/assets/3dcdacc6-0694-471f-a1dd-fbc0b56d1fce" />
 <img width="1452" height="883" alt="image" src="https://github.com/user-attachments/assets/8328faf6-e539-4e1c-b611-590620449570" />
 
-## Feedback CSV
+## Feedback Form
+https://docs.google.com/forms/d/e/1FAIpQLSdlWq1o723XapPdiOq9h1viVGqY-x-c7yRv9ntwJrZpYq7sEg/viewform?usp=publish-editor
 
-https://drive.google.com/file/d/1GeOfMldiNG8vDBs25XmR1Gqf3pgis3w5/view?usp=sharing
-
-https://github.com/arihantgh/polystellar/blob/main/feedback.csv
+## Feedback Responses
+https://docs.google.com/spreadsheets/d/1Rk1Y8P_xq9-qSYhwaq-YUSMxRH7gw3XF-LJf1OIm2EY/edit?usp=sharing
 
 ## 🌟 Features
 
