@@ -54,7 +54,6 @@ https://github.com/arihantgh/polystellar/blob/main/feedback.csv
 
 ### Smart Contracts (Rust/Soroban)
 - **Prediction Market Contract**: Core contract managing market creation, trading, and settlement
-- **Automated Market Maker**: Constant product formula (x * y = k) for price discovery
 - **Token Integration**: Uses Stellar native tokens for trading
 
 ### Frontend (React)
